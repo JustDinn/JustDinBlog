@@ -60,9 +60,12 @@ const CONFIG = {
   utterances: {
     enable: true,
     config: {
+      src: "https://utteranc.es/client.js",
       repo: process.env.NEXT_PUBLIC_UTTERANCES_REPO || "",
       "issue-term": "og:title",
       label: "💬 Utterances",
+      theme: "github-light",
+      crossorigin: "anonymous"
     },
   },
   cusdis: {
