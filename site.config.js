@@ -7,7 +7,7 @@ const CONFIG = {
     bio: "협업과 문서화를 중시하는 개발자입니다.",
     email: "kht1790@naver.com",
     linkedin: "",
-    github: "morethanmin",
+    github: "DIN-STUDIO",
     instagram: "",
   },
   projects: [
