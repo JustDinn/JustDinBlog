@@ -14,12 +14,12 @@ const CONFIG = {
     {
       name: `향모아`,
       href: "https://github.com/HMOAA/HMOA_iOS",
-      icon: "HMOA"
+      icon: "HMOAIcon"
     },
     {
       name: `밥점줘`,
       href: "https://github.com/INU-BJJ/bjj-iOS",
-      icon: "BJJ"
+      icon: "BJJIcon"
     }
   ],
   // blog setting (required)

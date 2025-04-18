@@ -20,7 +20,7 @@ const ServiceCard: React.FC = () => {
         <Emoji>🌟</Emoji> Service
       </StyledTitle>
       <StyledWrapper>
-        {CONFIG.projects.map((project, idx) => (
+        {CONFIG.projects.map((project, idx) => {
           const Icon = iconMap[project.icon] || (() => <AiFillCodeSandboxCircle className="icon" />) // fallback
 
           return (
@@ -34,7 +34,7 @@ const ServiceCard: React.FC = () => {
               <div className="name">{project.name}</div>
             </a>
           )
-        ))}
+        })}
       </StyledWrapper>
     </>
   )
