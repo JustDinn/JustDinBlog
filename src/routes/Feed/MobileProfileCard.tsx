@@ -12,7 +12,7 @@ const MobileProfileCard: React.FC<Props> = () => {
       <div className="top">💻 Profile</div>
       <div className="mid">
         <div className="wrapper">
-          <img
+          <object
             src={CONFIG.profile.image}
             width={90}
             height={90}
@@ -22,7 +22,8 @@ const MobileProfileCard: React.FC<Props> = () => {
               objectFit: "cover",
               display: "block",
             }}
-          />
+          >
+          </object>
           <div className="wrapper">
             <div className="top">{CONFIG.profile.name}</div>
             <div className="mid">{CONFIG.profile.role}</div>
