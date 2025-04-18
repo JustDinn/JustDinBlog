@@ -13,15 +13,17 @@ const ServiceCard: React.FC = () => {
       </StyledTitle>
       <StyledWrapper>
         {CONFIG.projects.map((project, idx) => {
-          <a
-            key={idx}
-            href={`${project.href}`}
-            rel="noreferrer"
-            target="_blank"
-          >
-            <img src="project.icon" className="icon" />
-            <div className="name">{project.name}</div>
-          </a>
+          return (
+            <a
+              key={idx}
+              href={`${project.href}`}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <img src="project.icon" className="icon" />
+              <div className="name">{project.name}</div>
+            </a>
+          )
         })}
       </StyledWrapper>
     </>
