@@ -22,15 +22,18 @@ const ServiceCard: React.FC = () => {
       <StyledWrapper>
         {CONFIG.projects.map((project, idx) => (
           const Icon = iconMap[project.icon] || (() => <AiFillCodeSandboxCircle className="icon" />) // fallback
-          <a
-            key={idx}
-            href={`${project.href}`}
-            rel="noreferrer"
-            target="_blank"
-          >
-            <Icon className="icon" />
-            <div className="name">{project.name}</div>
-          </a>
+
+          return (
+            <a
+              key={idx}
+              href={`${project.href}`}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <Icon className="icon" />
+              <div className="name">{project.name}</div>
+            </a>
+          )
         ))}
       </StyledWrapper>
     </>
