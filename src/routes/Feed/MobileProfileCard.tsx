@@ -18,6 +18,8 @@ const MobileProfileCard: React.FC<Props> = () => {
     setIsSafari(isSafariBrowser())
   }, [])
 
+  if (isSafari === null) return null
+
   return (
     <StyledWrapper>
       <div className="top">💻 Profile</div>
