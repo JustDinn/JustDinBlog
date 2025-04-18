@@ -1,5 +1,5 @@
 import { CONFIG } from "site.config"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styled from "@emotion/styled"
 
 type Props = {
