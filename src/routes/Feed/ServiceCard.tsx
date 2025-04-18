@@ -4,6 +4,14 @@ import { AiFillCodeSandboxCircle } from "react-icons/ai"
 import styled from "@emotion/styled"
 import { Emoji } from "src/components/Emoji"
 
+import HMOAIcon from "src/assets/Icons/HMOA"
+import BJJIcon from "src/assets/Icons/BJJ"
+
+const iconMap: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
+  HMOAIcon,
+  BJJIcon,
+}
+
 const ServiceCard: React.FC = () => {
   if (!CONFIG.projects) return null
   return (
@@ -13,13 +21,14 @@ const ServiceCard: React.FC = () => {
       </StyledTitle>
       <StyledWrapper>
         {CONFIG.projects.map((project, idx) => (
+          const Icon = iconMap[project.icon] || (() => <AiFillCodeSandboxCircle className="icon" />) // fallback
           <a
             key={idx}
             href={`${project.href}`}
             rel="noreferrer"
             target="_blank"
           >
-            <AiFillCodeSandboxCircle className="icon" />
+            <Icon className="icon" />
             <div className="name">{project.name}</div>
           </a>
         ))}
