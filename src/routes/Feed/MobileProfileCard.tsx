@@ -6,15 +6,26 @@ type Props = {
   className?: string
 }
 
+const isSafariBrowser = (): boolean => {
+  if (typeof window === "undefined") return false
+  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+}
+
 const MobileProfileCard: React.FC<Props> = () => {
+  const [isSafari, setIsSafari] = useState(false)
+
+  useEffect(() => {
+    setIsSafari(isSafariBrowser())
+  }, [])
+
   return (
     <StyledWrapper>
       <div className="top">💻 Profile</div>
       <div className="mid">
         <div className="wrapper">
-          <object
-            data={CONFIG.profile.image}
-            type="image/svg+xml"
+          <img
+            src={isSafari ? "/avatar.png" : CONFIG.profile.image}
+            alt="profile_image"
             width={90}
             height={90}
             style={{
@@ -22,20 +33,7 @@ const MobileProfileCard: React.FC<Props> = () => {
               objectFit: "cover",
               display: "block",
             }}
-          >
-            {/* fallback content */}
-            <img
-              src="/avatar.png"
-              alt="fallback_profile"
-              width={90}
-              height={90}
-              style={{
-                borderRadius: "9999px",
-                objectFit: "cover",
-                display: "block",
-              }}
-            />
-          </object>
+          />
           <div className="wrapper">
             <div className="top">{CONFIG.profile.name}</div>
             <div className="mid">{CONFIG.profile.role}</div>
