@@ -1,13 +1,13 @@
 const CONFIG = {
   // profile setting (required)
   profile: {
-    name: "DIN-STUDIO",
+    name: "JustDin",
     image: "/avatar.svg", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
     role: "iOS Developer",
     bio: "협업과 문서화를 중시하는 개발자입니다.",
     email: "kht1790@naver.com",
     linkedin: "",
-    github: "DIN-STUDIO",
+    github: "JustDinn",
     instagram: "",
   },
   projects: [
@@ -22,13 +22,13 @@ const CONFIG = {
   ],
   // blog setting (required)
   blog: {
-    title: "JustDinLog",
+    title: "JustDinBlog",
     description: "Welcome to iOS world!",
     scheme: "system", // 'light' | 'dark' | 'system'
   },
 
   // CONFIG configration (required)
-  link: "https://just-din-log.vercel.app",
+  link: "https://justdinblog.vercel.app",
   since: 2025, // If leave this empty, current year will be used.
   lang: "ko-KR", // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES', 'ko-KR']
   ogImageGenerateURL: "https://og-image-korean.vercel.app", // The link to generate OG image, don't end with a slash
