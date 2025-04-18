@@ -1,5 +1,4 @@
 import { CONFIG } from "site.config"
-import Image from "next/image"
 import React from "react"
 import styled from "@emotion/styled"
 
@@ -13,12 +12,16 @@ const MobileProfileCard: React.FC<Props> = () => {
       <div className="top">💻 Profile</div>
       <div className="mid">
         <div className="wrapper">
-          <Image
+          <img
             src={CONFIG.profile.image}
             width={90}
             height={90}
-            css={{ position: "relative" }}
             alt="profile_image"
+            style={{
+              borderRadius: "9999px",
+              objectFit: "cover",
+              display: "block",
+            }}
           />
           <div className="wrapper">
             <div className="top">{CONFIG.profile.name}</div>
