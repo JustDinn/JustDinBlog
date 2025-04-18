@@ -13,16 +13,28 @@ const MobileProfileCard: React.FC<Props> = () => {
       <div className="mid">
         <div className="wrapper">
           <object
-            src={CONFIG.profile.image}
+            data={CONFIG.profile.image}
+            type="image/svg+xml"
             width={90}
             height={90}
-            alt="profile_image"
             style={{
               borderRadius: "9999px",
               objectFit: "cover",
               display: "block",
             }}
           >
+            {/* fallback content */}
+            <img
+              src="/avatar.png"
+              alt="fallback_profile"
+              width={90}
+              height={90}
+              style={{
+                borderRadius: "9999px",
+                objectFit: "cover",
+                display: "block",
+              }}
+            />
           </object>
           <div className="wrapper">
             <div className="top">{CONFIG.profile.name}</div>
