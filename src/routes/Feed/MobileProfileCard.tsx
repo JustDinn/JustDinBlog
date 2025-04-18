@@ -12,7 +12,7 @@ const isSafariBrowser = (): boolean => {
 }
 
 const MobileProfileCard: React.FC<Props> = () => {
-  const [isSafari, setIsSafari] = useState(false)
+  const [isSafari, setIsSafari] = useState<boolean | null>(null)
 
   useEffect(() => {
     setIsSafari(isSafariBrowser())
