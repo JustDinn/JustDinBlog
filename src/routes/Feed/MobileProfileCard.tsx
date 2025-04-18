@@ -1,33 +1,19 @@
 import { CONFIG } from "site.config"
-import React, { useEffect, useState } from "react"
+import React from "react"
 import styled from "@emotion/styled"
 
 type Props = {
   className?: string
 }
 
-const isSafariBrowser = (): boolean => {
-  if (typeof window === "undefined") return false
-  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
-}
-
 const MobileProfileCard: React.FC<Props> = () => {
-  const [isSafari, setIsSafari] = useState<boolean | null>(null)
-
-  useEffect(() => {
-    setIsSafari(isSafariBrowser())
-  }, [])
-
-  if (isSafari === null) return null
-
   return (
     <StyledWrapper>
       <div className="top">💻 Profile</div>
       <div className="mid">
         <div className="wrapper">
           <img
-            src={isSafari ? "/avatar.png" : CONFIG.profile.image}
-            alt="profile_image"
+            src={CONFIG.profile.image}
             width={90}
             height={90}
             style={{
