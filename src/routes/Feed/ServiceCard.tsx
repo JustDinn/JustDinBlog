@@ -59,6 +59,8 @@ const StyledWrapper = styled.div`
       background-color: ${({ theme }) => theme.colors.gray5};
     }
     .icon {
+      width: 1.5rem;
+      height: 1.5rem;
       font-size: 1.5rem;
       line-height: 2rem;
     }

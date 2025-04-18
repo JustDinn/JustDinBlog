@@ -19,7 +19,7 @@ const CONFIG = {
     {
       name: `밥점줘`,
       href: "https://github.com/INU-BJJ/bjj-iOS",
-      icon: "/Icons/HMOA.svg"
+      icon: "/Icons/BJJ.svg"
     }
   ],
   // blog setting (required)
