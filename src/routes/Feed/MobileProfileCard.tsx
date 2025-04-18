@@ -24,11 +24,9 @@ const MobileProfileCard: React.FC<Props> = () => {
             }}
           /> */}
 
-          <object 
-            type="image/svg+xml"
+          <object
             data={CONFIG.profile.image}
           >
-            <img src={CONFIG.profile.image} alt="Profile Icon"/>
           </object>
 
 
