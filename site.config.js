@@ -26,7 +26,7 @@ const CONFIG = {
   blog: {
     title: "JustDinBlog",
     description: "Welcome to iOS world!",
-    scheme: "system", // 'light' | 'dark' | 'system'
+    scheme: "light", // 'light' | 'dark' | 'system'
   },
 
   // CONFIG configration (required)
